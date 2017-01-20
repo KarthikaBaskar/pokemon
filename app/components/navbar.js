@@ -7,8 +7,10 @@ export default class navbar extends Component {
     return (
        <NavigationBar
          title={{ title:'PokeMap'}}
+         tintColor='white'
          leftButton= {{ title:'Back'}}
-         rightButton={{ title:'Cancel'}}/>
+         rightButton={{ title:'Cancel'}}
+        />
     );
   }
 }
