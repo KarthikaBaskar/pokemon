@@ -9,22 +9,20 @@ import  InputBox from '../components/input';
 import  Card from '../components/card';
 import  Button from '../components/button';
 
-export default class home extends Component {
+class home extends Component {
   constructor(props){
     super(props);
     this.state = { searchKey: '' };
+    console.log(this.state);
     this.initSearch = this.initSearch.bind(this);
   }
 
   changeText(text) {
-    console.log(text);
     this.setState({searchKey: text});
   }
 
   initSearch(){
     this.props.dispatch(fetchPokemon({searchKey: this.state.searchKey}));
-    console.log(this.state);
-    console.log('search done');
   }
 
   render() {
@@ -40,3 +38,8 @@ export default class home extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return { pokemons: state.pokemons }
+}
+export default connect(mapStateToProps)(home);

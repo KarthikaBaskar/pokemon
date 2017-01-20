@@ -5,19 +5,15 @@ import { bindActionCreators } from 'redux';
 
 // import { ActionCreators } from './actions';
 import Home from './containers/home';
+import configureStore from './store/storeConfig';
 
+const store = configureStore();
 
 export default class pokemonContainer extends Component {
+
   render() {
     return (
-      <Home />
+      <Home store={store}/>
     );
   }
 }
-
-// sending actions || dispatching actions
-// function mapDispatchToProps(dispatch) {
-//   return bindActionCreators(ActionCreators, dispatch);
-// }
-//
-// connect((state) => { return {} }, mapDispatchToProps)(pokemonContainer);
