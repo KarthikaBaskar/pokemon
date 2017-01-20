@@ -7,7 +7,7 @@ export default class navbar extends Component {
     return (
        <NavigationBar
          title={{ title:'PokeMap'}}
-         tintColor='white'
+         tintColor='#b3e5fc'
          leftButton= {{ title:'Back'}}
          rightButton={{ title:'Cancel'}}
         />
