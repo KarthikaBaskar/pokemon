@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import { connect } from 'react-redux';
 // action
+import { fetchPokemon } from '../actions/pokemons';
+// Components
 import  Navbar from '../components/navbar';
 import  InputBox from '../components/input';
 import  Card from '../components/card';
@@ -20,6 +22,7 @@ export default class home extends Component {
   }
 
   initSearch(){
+    this.props.dispatch(fetchPokemon({searchKey: this.state.searchKey}));
     console.log(this.state);
     console.log('search done');
   }
