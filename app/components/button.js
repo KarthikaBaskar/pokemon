@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
-import { Button } from 'react-native';
+import { TouchableHighlight, Text } from 'react-native';
+import { connect } from 'react-redux';
 
-export default class button extends Component {
+export default class buttonComponent extends Component {
+  constructor(props){
+    super(props);
+  }
 
   render() {
     return (
-      <Button
-        title="Search"
-        color="#841584"
+      <TouchableHighlight
+        onPress={ () => this.props.onClick() }
         style={{height: 40}}
-      />
+        color='#841584'
+      >
+        <Text>SEARCH</Text>
+      </TouchableHighlight>
     );
   }
 }
+
+// function mapStateToProps(state){
+//   return {
+//     // searchedPokemons: state.searchedPokemons
+//   };
+// }
+
+// export default connect(mapStateToProps)(buttonComponent);

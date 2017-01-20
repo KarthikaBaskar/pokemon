@@ -4,15 +4,18 @@ import { TextInput } from 'react-native';
 export default class inputBox extends Component {
   constructor(props) {
     super(props);
-    this.state = { text:'' };
+  }
+
+  changeText(text) {
+    this.props.changeText(text.text);
   }
 
   render() {
     return (
       <TextInput
         style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-        onChangeText={(text) => this.setState({text})}
-        value={this.state.text}
+        onChangeText={(text) => this.changeText({text})}
+        value={this.props.searchKey}
         placeHolder='Enter your favourite pokemon'
       />
     );
