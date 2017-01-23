@@ -1,9 +1,9 @@
-export default function pokemonReducer(state = {}, action) {
-  console.log("reducer", state, action);
-  switch(action.type){
-    case 'SEARCH_POKEMON':
-      return action.pokemons;
-    default:
-      return state;
-  }
-}
+import { combineReducers } from 'redux';
+import pokemon from './pokemon';
+import i18n from './i18n';
+
+
+export default combineReducers({
+ pokemon,
+ i18n
+});

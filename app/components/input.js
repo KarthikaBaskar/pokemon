@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { TextInput } from 'react-native';
 
 export default class inputBox extends Component {
+
   constructor(props) {
     super(props);
   }
@@ -20,4 +21,14 @@ export default class inputBox extends Component {
       />
     );
   }
+
+
+}
+
+inputBox.propTypes = {
+  changeText: PropTypes.func.isRequired,
+  searchKey: PropTypes.string.isRequired
+}
+inputBox.defaultProp = {
+  searchKey: "Something to search"
 }

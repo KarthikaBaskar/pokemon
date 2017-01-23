@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { TouchableHighlight, Text } from 'react-native';
-import { connect } from 'react-redux';
+
 
 export default class buttonComponent extends Component {
   constructor(props){
@@ -19,11 +19,3 @@ export default class buttonComponent extends Component {
     );
   }
 }
-
-// function mapStateToProps(state){
-//   return {
-//     // searchedPokemons: state.searchedPokemons
-//   };
-// }
-
-// export default connect(mapStateToProps)(buttonComponent);

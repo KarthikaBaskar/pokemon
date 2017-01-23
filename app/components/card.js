@@ -5,6 +5,7 @@ export default class card extends Component {
   render () {
     return (
       <View style={styles.container}>
+        {this.props.children}
       </View>
     );
   }
