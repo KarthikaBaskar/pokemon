@@ -1,6 +1,6 @@
 export default function pokemonReducer(state = {}, action) {
-  console.log(state, action);
-  switch(action){
+  console.log("reducer", state, action);
+  switch(action.type){
     case 'SEARCH_POKEMON':
       return action.pokemons;
     default:

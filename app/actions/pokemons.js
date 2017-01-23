@@ -13,9 +13,9 @@ export function fetchPokemon(params) {
 
 export function setSearchedPokemons({ pokemons }) {
   console.log(pokemons);
-  pokemonReducer();
-  return {
+  console.log(types.SEARCH_POKEMON);
+  return pokemonReducer({searchKey: pokemons}, {
     type: types.SEARCH_POKEMON,
-    pokemons
-  };
+    pokemons : pokemons
+  });
 }
